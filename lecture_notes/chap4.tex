@@ -1,0 +1,190 @@
+\chapter{Computation of the first four actions}    \label{chapter-5}
+
+
+
+
+
+Recall from Sec.~\ref{C3-construct_AA} that action variables are given by
+\begin{equation}
+\mathcal{J}_{i}=\frac{1}{2 \pi} \oint_{\gamma_{i}} \vec{P} \cdot d \vec{Q} , 
+\end{equation}
+where the integral is performed over  a loop on the $n$-dimensional 
+submanifold defined by constant values of the $n$ commuting constants.
+One way to remain on this submanifold is to flow under any of the 
+$n$ commuting constants, for if you flow under any of the commuting 
+constants, the other commuting constants don't change. This is because
+under the flow of $C_j$, $C_i$ changes as (using Eq.~\eqref{H-flow})
+\begin{align}
+\frac{d C_i}{d \lambda} =  \pb{C_i, C_j}   = 0 .
+\end{align}
+
+
+
+Owing to this observation, we will try to
+form loops for action integration while flowing 
+under the commuting constants in the following sections.
+
+
+
+\section{Computation of $\mc{J}_1$}    \label{result_first_action}
+
+
+
+Let's flow under one of the commuting constants $J^2$, square of the 
+magnitude of the total angular momentum $\vv{J} = \vv{L} + \vv{S}_1 + \vv{S}_2$.
+Its flow equation is (with $\vv{V}$ standing for 
+the column vector containing all the variables in $\vv{R}, \vv{P}, \vv{S}_1$
+and $\vv{S}_2$)
+\begin{equation}
+\frac{d \vec{V}}{d \lambda} = 2 \vec{J} \times \vec{V},      \label{flow_action_1}
+\end{equation}
+which implies that all the four 3D vectors rotate around 
+the fixed $2 \vv{J}$ vector (note that $\pb{\vv{J}, J^2} = 0$).
+Using $\vv{n}$ to denote the vector around which all the four
+3D vectors rotate, we see that $\vv{n} = 2 \vv{J} $.
+In fact we had already worked this out and the pictorial 
+representation has already been presented in the form 
+of Fig.~\ref{Jsq_flow}.
+
+
+Now, Eq.~\eqref{flow_action_1} implies that we will
+arrive at where we started from (thus closing  a loop) after we have
+flowed by an amount $\Delta \lambda = 
+2 \pi/|\text{angular~velocity}|  
+= 2 \pi/(2 J)   = \pi/J$.
+
+
+Now, we break down the action integral as
+\begin{equation}
+\begin{aligned}
+\mathcal{J} &=\mathcal{J}^{\text {orb }}+\mathcal{J}^{\text {spin }} \\
+\mathcal{J}^{\text {orb }} & \equiv \frac{1}{2 \pi} \oint_{\mathcal{C}} \sum_{i} P_{i} d R^{i}   \\
+\mathcal{J}_{A}^{\mathrm{spin}}  & =\frac{1}{2 \pi} \oint S_{A}^{z} d \phi_{A} .
+\end{aligned}
+\end{equation}
+Let's tackle the orbital sector first. The orbital contribution
+to the action integral becomes
+\begin{align}
+\mathcal{J}^{\text {orb }} &=\frac{1}{2 \pi} \int_{0}^{\Delta \lambda} P_{i} \frac{d R^{i}}{d \lambda} d \lambda=\frac{1}{2 \pi} \int_{0}^{\Delta \lambda} \vec{P} \cdot(\vec{n} \times \vec{R}) d \lambda \\
+&=\frac{1}{2 \pi} \int_{0}^{\Delta \lambda} \vec{n} \cdot \vec{L} d \lambda=\hat{n} \cdot \vec{L}   .     \label{orbital_contribution}
+\end{align}
+The spin sector integral is 
+\begin{align}
+\mathcal{J}_{A}^{\mathrm{spin}}  & =\frac{1}{2 \pi} \oint S_{A}^{z} d \phi_{A},
+\end{align}
+which does not appear to be SO(3) covariant, but it actually is. 
+This means we can that this integral is insensitive to
+the rigid rotations of our coordinate axes.
+
+
+\hfill \break
+
+
+\begin{definition}[label=def:D]
+Using the language of symplectic forms and differential geometric version 
+of the generalized Stokes' theorem, we can see that 
+$ \oint S_z d \phi =  \int d S_z \wedge d\phi$, the integral on the LHS is a
+line integral, whereas that on the RHS is an area integral on the spin
+sphere. Area integrals are indeed SO(3) covariant.
+\end{definition}
+
+\hfill \break
+
+
+So, we rotate our axes so that the $z$-axis points along $\vv{n}$.
+The spin sector integral is 
+\begin{align}
+\mathcal{J}_{A}^{\mathrm{spin}}   =\frac{1}{2 \pi} \oint S_{A}^{z} d \phi_{A} 
+  & =    S_{A}^{z}   =  \hat{n} \cdot \vv{S}_A.   \label{spin_contribution}
+\end{align}
+We have used the fact that $S_{A}^{z}$ is constant on the loop of integration;
+this is so because $\vv{S}_A$ makes a constant angle with the $z$-axis 
+(or $\vv{n}$ vector) while we perform the line integral.
+
+
+
+Finally, combining Eqs.~\eqref{orbital_contribution} and \eqref{spin_contribution},
+our action integral becomes 
+\begin{equation}
+\mathcal{J}=\hat{n} \cdot\left(\vec{L}+\vec{S}_{1}+\vec{S}_{2}\right)=\hat{n} \cdot \vec{J} = J.
+\end{equation}
+
+
+
+
+\section{Computation of $\mc{J}_2$ and $\mc{J}_3$}
+
+The procedure for computing the next two actions is very similar.
+Instead of flowing under $J^2$, we flow under $L^2$ and $J_z$,
+with the corresponding $\vec{n}$ being $2 \vv{L}$ and $\hat{z}$,
+with the exception that under the $L^2$ flow, the spin vectors
+don't move; only orbital ones do.
+The amount of flow required to close the loop is still given by
+$\Delta \lambda = 2 \pi/n$.
+
+
+Doing similar calculations as above, we find that the 
+corresponding actions turn out to be $\hat{n} \cdot \vec{J}$
+which gives us 
+\begin{equation}
+\mathcal{J}_{2}= L , \quad \mathcal{J}_{3}=  J_z.
+\end{equation}
+All in all we finally have 
+\begin{equation}
+\mathcal{J}_{2}= J, \quad\mathcal{J}_{2}= L , \quad \mathcal{J}_{3}=  J_z.
+\end{equation} \\
+
+
+
+\begin{tcolorbox}
+From the expressions of the above three actions, we note two features
+that actions appear to possess
+\begin{itemize}
+\item Action variables are functions of the commuting constants: $\mc{J}(\vec{C})$.
+In fact, all actions are constants and are also mutually commuting. 
+\item An action is a function of only those $C_i$'s under which we need to flow
+to close the loop, the integral over which furnishes the action. 
+\end{itemize}
+\end{tcolorbox}
+
+
+
+
+
+\section{Computation of $\mc{J}_4$}
+
+
+We won't derive $\mc{J}_4$ because, this action also
+has a Newtonian limit which is derived in graduate level texts; see
+Eq.~(10.139) of Ref.~\cite{goldstein2013classical}. 
+It's 1PN extension was worked out in Ref.~\cite{Damour:1988mr}, 
+see Eq.~(3.10) therein. The 1.5PN version of this action is given 
+in Eq.~(38) of Ref.~\cite{tanay2021integrability}.
+The methods to achieve these PN versions of the fourth action
+is similar and chiefly involves complex contour integration technique
+invented by Arnold Sommerfeld.
+
+
+
+For the reference of the reader, the fourth action is
+\begin{equation}
+\mathcal{J}_{4}=-L+\frac{G M \mu^{3 / 2}}{\sqrt{-2 H}}+\frac{G M}{c^{2}}\left[\frac{3 G M \mu^{2}}{L}+\frac{\sqrt{-H} \mu^{1 / 2}(\nu-15)}{\sqrt{32}}-\frac{2 G \mu^{3}}{L^{3}} \vec{S}_{\mathrm{eff}} \cdot \vec{L}\right]+\mathcal{O}\left(c^{-4}\right)
+\end{equation}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

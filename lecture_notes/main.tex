@@ -1,0 +1,112 @@
+\documentclass[12pt]{report}
+
+
+
+\usepackage{amsxtra}
+\usepackage{amsopn}
+\usepackage{amsbsy}
+\usepackage{amstext}
+\usepackage{amsmath, amsfonts}
+\usepackage{dsfont}
+\usepackage{autobreak}
+\usepackage{docmute}
+\usepackage{dcolumn}
+\usepackage{amsthm}
+\usepackage{epsfig}
+\usepackage{graphicx}
+\usepackage{graphics}
+\usepackage{latexsym}
+\usepackage{rotating}
+\usepackage[usenames]{color}
+\usepackage{yfonts}
+\usepackage{float}
+\usepackage{ucs}
+\usepackage{xspace} 
+\usepackage{mathrsfs}
+\usepackage{booktabs}
+\usepackage[toc,page]{appendix}
+\usepackage{array}
+\usepackage[normalem]{ulem}
+\usepackage{tikz}
+\usepackage[super]{nth}
+\usepackage[margin=2cm]{geometry}
+\usepackage{xr-hyper}
+\usepackage[colorlinks=true]{hyperref}
+\usepackage{exercise}
+\usepackage[most]{tcolorbox}
+\usepackage{setspace}
+
+
+\newcommand{\eff}{\text{eff}}
+\newcommand{\SeffL}{\vec{S}_{\eff}\cdot \vec{L}}
+\newcommand{\Eff}{\vec{S}_{\eff}\cdot \vec{L}}
+\newcommand{\pb}[1]{\left\lbrace  #1   \right\rbrace  }
+\newcommand{\vv}[1]{ \vec{#1}}
+\newcommand{\mc}[1]{ \mathcal{#1}}
+\newcommand{\cJ}{\mathcal{J}}
+\newcommand{\pd}{\partial}
+
+
+
+
+
+\allowdisplaybreaks
+
+\newtcolorbox[auto counter,number within=chapter]{definition}[1][]{
+  enhanced,
+  breakable,
+  fonttitle=\scshape,
+  title={Box \thetcbcounter},
+  #1
+}
+
+
+
+\externaldocument[C00-]{chap00}
+\externaldocument[C0-]{chap0}
+\externaldocument[C1-]{chap1}
+\externaldocument[C2-]{chap2}
+\externaldocument[C3-]{chap3}
+\externaldocument[C4-]{chap4}
+\externaldocument[C5-]{chap5}
+
+\setstretch{1.2}
+
+
+\begin{document}
+
+
+
+\begin{titlepage}
+\begin{center}
+{\Large Action-angle-based closed-form solution of the 1.5 post-Newtonian binary black hole system}\\
+Lecture Notes\\
+\end{center}
+\begin{center}
+{Sashwat Tanay (sashwattanay@gmail.com)}
+\end{center}
+\end{titlepage}
+
+
+
+\tableofcontents
+
+\include{chap00}
+\include{chap0}
+\include{chap1}
+\include{chap2}
+\include{chap3}
+\include{chap4}
+\include{chap5}
+
+
+
+
+
+\bibliographystyle{unsrt}
+\bibliography{pn_v2}
+\end{document}
+
+
+
+

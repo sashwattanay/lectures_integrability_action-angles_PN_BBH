@@ -1,0 +1,212 @@
+\chapter{Integrable systems and action-angle variables}      \label{define_integrable_sys}
+
+\section{Definitions}        \label{definition}
+
+We will focus our attention on systems which possess a time-independent
+Hamiltonian \\
+
+\textbf{Hamiltonian systems:} A dynamical system possessing a 
+Hamiltonian $H(\vv{p}, \vv{q})$ and whose EOMs are given 
+via Hamilton's equations.
+\begin{align}   
+\dot{q_i} =  \frac{\partial H}{\partial p_i},~  ~~~~~~~~~~~~~
+\dot{p_i} = - \frac{\partial H}{\partial q_i}, \\
+\end{align}
+
+
+
+
+\textbf{Canonical transformation:} For a Hamiltonian system with the
+Hamiltonian $H(\vv{p}, \vv{q})$, a transformation $\vv{Q}(\vv{p}, \vv{q}),
+\vv{P}(\vv{p}, \vv{q})$ is called canonical if Hamilton's equations in
+the old coordinates imply Hamilton's equations in the new coordinates, i.e.
+\begin{align}
+& \dot{q_i} =  \frac{\partial H}{\partial p_i},~  ~~~~~~~~~~~~~
+\dot{p_i} = - \frac{\partial H}{\partial q_i}    \\
+\implies &  \dot{Q_i} =  \frac{\partial K}{\partial P_i},~  ~~~~~~~~~~~~~
+\dot{P_i} = - \frac{\partial K}{\partial Q_i}, 
+\end{align}
+where $K (\vec{P}, \vec{Q}) =
+   H(   \vv{p}(\vv{P}, \vv{Q}), \vv{q}(\vv{P}, \vv{Q}) )$. \\
+
+
+
+\textbf{Integrable system and action-angle variables:} 
+We will define integrable  systems and action-angle variables (AAVs)
+in one shot.
+For integrable systems, 
+canonical transformation $( \vec{p}, \vec{q}) \leftrightarrow $ {$ (  \vec{\cal{J}} , \vec{\theta})$} exists such that {$H = H(\vec{\mathcal{J}})$}
+(or rather $ \pd H/ \pd \theta_i = 0$)
+and also
+{$\{ \vec{p}, \vec{q} \}(\theta_i + 2 \pi)  = \{ \vec{p}, \vec{q} \}(\theta_i ) $}.
+The first equation means that the Hamiltonian depends only on the actions 
+and not the angles.
+The last equation means that $\vv{p}$ and $\vv{q}$ are $2 \pi$-periodic
+functions of $\theta_i$'s. $\mc{J}_i$'s and $\theta_i$'s are respectively called
+the action and the angle variables.
+
+
+
+
+\section{Elementary properties of action-angle variables}
+
+The above definition of action-angle variables may seem ad-hoc 
+but some very useful conclusions follow from this definition.
+First note that due to 
+ $( \vec{p}, \vec{q}) \leftrightarrow $ {$ (  \vec{\cal{J}} , \vec{\theta})$} 
+ being a canonical transformation, the actions 
+ $\vec{\cal{J}} $ act like the new momenta variable and the 
+ angles $\vec{\theta}$ act like the new position variables.
+ 
+ 
+ Writing Hamilton's equations in terms of these new momenta and
+ positions (actions and angles), we get
+\begin{align}              
+\dot{\mathcal{J}}_{i}  &=   -  \frac{\partial H}{ \partial \theta_{i}}    =0    &&   \Longrightarrow \mathcal{J}_{i} \text { stay constant } ,  \label{AA_eqn_1}   \\ 
+\dot{\theta}_{i}   &=   \frac{\partial H }{ \partial \mathcal{J}_{i}} \equiv \omega_{i}(\overrightarrow{\mathcal{J}})     && \Longrightarrow \theta_{i}=\omega_{i}(\overrightarrow{\mathcal{J}}) t. \label{AA_eqn_2} 
+\end{align}
+We have chosen to 
+call $\partial H/ \partial \mathcal{J}_{i} $ the frequencies $\omega_i$'s
+since they denote the linear rate of increase of the 
+corresponding angles $\theta_i$'s. These frequencies $\omega_i$'s are 
+constants too since they are functions of only the constant $\mc{J}_i$'s.
+
+
+
+More interesting and useful conclusions follow. It's clear that we know what 
+actions and angles are at any later time given their values at an initial time
+(actions stay constants, angle increase linearly with time at a known rate).
+Therefore, \textit{if we know how to switch back} from $(  \vec{\cal{J}} , \vec{\theta})$
+to $(\vv{p}, \vv{q})$, then we can have $\vv{p}(t), \vv{q}(t)$ for any later time $t$,
+that is to say, we can have the solution of the system.
+
+
+We now summarize the above conclusions.\\
+\begin{tcolorbox}
+From the above definition of action-angle variables, it follows that
+\begin{itemize}
+\item Actions are constants.
+\item Angles increase linearly with time at constant  rate $\omega_i  =  \partial H/ \partial \mathcal{J}_{i} $ .
+\item Having action-angle variables can help us have the solution $\vec{p}(t), \vec{q}(t)$ of the system.
+\end{itemize}
+\end{tcolorbox}
+
+
+
+
+\section{Liouville-Arnold theorem}
+
+
+\subsection{Statement of the theorem}
+
+Stated loosely, the Liouville-Arnold (LA) theorem  says that if a Hamiltonian system with
+$2 n$ phase-space variables (positions and momenta), possesses $n$ constants of motion (including the
+Hamiltonian)
+which mutually commute among themselves, then the system is integrable and it possesses action-angle variables.
+
+
+
+
+
+\hfill \break
+
+
+\begin{definition}[label=def:A]
+For  a more rigorous statement of the the theorem, along with its
+proof, the reader is to referred to Chapter 11 of Ref.~\cite{fasano}.
+\end{definition}
+
+\hfill \break
+
+
+
+\subsection{Application of the Liouville-Arnold theorem to the spinning BBH system}
+
+
+To apply the LA theorem to the spinning BBH system, we need to determine
+$2n$, the total number of positions and momenta. The total number of coordinate
+appears to be 12; each vector $\vv{R}, \vv{P}, \vv{S}_1$ and $\vv{S}_2$
+contributes 3 components. Despite that, $2n \neq 12$.
+The reason we can't count all 12 components of vectors 
+$\vv{R}, \vv{P}, \vv{S}_1$ and $\vv{S}_2$
+is because when it comes to spins $\vv{S}_1$ and $\vv{S}_2$, 
+it is not clear which components are positions and which are momenta. 
+Remember, $2n$ is supposed to be the total number of positions and momenta.
+
+
+
+To delineate the positions and momenta clearly in 
+the vectors $\vv{R}, \vv{P}, \vv{S}_1$ and $\vv{S}_2$, 
+we reproduce parts of
+Eqs.~\eqref{C0-PBs_defined_1} and \eqref{C0-spin-PB} 
+\begin{equation}
+\left\{R_{i}, P_{j}\right\}=\delta_{ij} \quad \text { and }   \left\{\phi_{A}, S_{B}^{z}\right\}=\delta_{A B},    \label{canonical PB}
+\end{equation}
+which lets us see that $\phi_A$ (the azimuthal 
+angle of $\vv{S}_A$) and $S^z_B$ (the $z$-component of 
+$\vv{S}_B$) act like position and momentum, respectively.
+ It is in this sense that we need to 
+count positions and momenta to determine ``$2n$''
+ for the application of the LA theorem.
+Every spin vector thus contributes 2 positions-momenta.
+Only 2 coordinates are needed to specify each spin
+since spin magnitudes are constants: $\dot{S_A} = \pb{S_A, H} = 0$
+(easily follows from Eqs.~\eqref{canonical PB} 
+and \eqref{C0-PBs_defined_2}).
+Therefore $2n$ for our spinning BBH
+is $3 + 3+ 2+2 = 10$, which means that we require $10/2 = 5$ mutually commuting constants of motion
+to establish integrability.
+
+
+The PB between 
+any two quantities
+among $R^i, P_i, \phi^i_A, S^z_{iA}$ that falls outside the purview of Eqs.~\eqref{canonical PB} and \eqref{PBs_defined_2} is 0.
+
+
+\newpage
+
+\hfill \break
+
+
+\begin{definition}[label=def:B]
+Rigorously speaking,
+integrability, action-angle variables and the LA theorem are built
+on the foundations of symplectic geometry (a branch of differential geometry).
+If the above process of counting the number of positions and momenta
+for the  application of the LA theorem
+seems shaky to the reader due to lack of rigor,
+they are referred to 
+\cite{jose, arnold, marsden_1, marsden_2} for an introduction to symplectic manifolds
+and Darboux coordinates and the statement of the LA theorem against this mathematical backdrop.
+\end{definition}
+
+\hfill \break
+
+
+
+For the spinning BBH, the five required 
+commuting constants have been long-known \cite{Damour:2001tu}.
+They are 
+\begin{align}
+H,~~~~~~~ J^2,~~~~~~~ L^2,~~~~~~~ J_z,~~~~~~~ \SeffL.    \label{CCs}
+\end{align}
+These
+quantities have already been defined in Sec.~\ref{statement}.
+Hence the 1.5PN spinning BBH is integrable and it possesses action-angle variables. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
