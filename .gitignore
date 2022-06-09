@@ -265,5 +265,5 @@ TSWLatexianTemp*
 
 # standalone packages
 *.sta
-/manuscript_for_paper/version_2/5th_action_v2.pdf
+main.pdf
 .DS_Store
