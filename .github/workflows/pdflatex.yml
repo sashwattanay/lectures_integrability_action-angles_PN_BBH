@@ -17,7 +17,7 @@ jobs:
       - name: Commit to orphan branch
         run: |
           git checkout --orphan gh-action-result/pdflatex
-          git rm -rf .
+          git reset
           git add lecture_notes/main.pdf
           git -c user.name='GitHub Action' -c user.email='action@github.com' commit -m "Built paper"
       - name: Push changes
