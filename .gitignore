@@ -265,5 +265,5 @@ TSWLatexianTemp*
 
 # standalone packages
 *.sta
-main.pdf
+#main.pdf
 .DS_Store
