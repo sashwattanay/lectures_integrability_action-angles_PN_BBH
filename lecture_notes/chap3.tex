@@ -76,7 +76,9 @@ Many textbooks take this expression of action as a definition \cite{goldstein201
   \centering
   \includegraphics[width=0.7\linewidth]{action_loop}
   \caption{ Action flow makes a loop. On this loop,
-  stamp the angle coordinates via $d \theta_i = d \lambda$.
+  stamp the angle coordinates via $d \theta_i = d \lambda_i$,
+  where $\lambda_i$ corresponds to the flow parameter under the 
+  $\mc{J}_i$.
     \vspace{-1.em}
   }
   \label{action_loop}
@@ -92,7 +94,7 @@ Many textbooks take this expression of action as a definition \cite{goldstein201
 \begin{definition}[label=def:C2]
 
 
-Note that there are two different loops in the picture when in our 
+Note that there are two different loops in the picture in the  
 above discussions. The first is the $\gamma_i$ loop (Loop 1) over which
 the action integral is evaluated, and the other is the one which is generated
 by flowing under the action (Loop 2).\\
@@ -317,8 +319,8 @@ Hence, {$\{ \vec{p}, \vec{q} \}(\theta_i + 2 \pi)  = \{ \vec{p}, \vec{q} \}(\the
 
 All in all, the take-home message is that (also shown in Fig.~\ref{action_loop})\\
 \begin{tcolorbox}
-as we flow under $\mc{J}_i$ (one of the actions), we form a loop after flowing by $\Delta \lambda = 2 \pi$.
-We can also stamp the angle coordinate $\theta^i$ on this loop by setting $\theta = \lambda + C_0$, where 
+as we flow under $\mc{J}_i$ (one of the actions), we form a loop after flowing by $\Delta \lambda_i = 2 \pi$.
+We can also stamp the angle coordinate $\theta^i$ on this loop by setting $\theta_i = \lambda_i + C_0$, where 
 $C_0$ is some constant real offset.
 \end{tcolorbox}
 
@@ -517,7 +519,7 @@ and $\vv{V}_0$ denotes its initial value at time $t=0$.
 We take $\vv{V}_0$ to correspond to all the angles being 0.
 
 
-Suppose the solution at required at  a later time $t$. So, we know that
+Suppose the solution is required at  a later time $t$. So, we know that
 all the angles have changed to $\Delta \theta_i = \omega_i t$. 
 We can easily have the numerical value of $\Delta \theta_i$ because we 
 can compute all the $\omega_i$'s (see Sec.~\ref{compute_freq}).
@@ -551,14 +553,24 @@ rotate around some fixed vector at a constant rate, with the exception that
 spins don't move at all under the $L^2$ flow. We will discuss this 
 to some degree in Chapter~\ref{C4-chapter-5}.
 \item The solution of the flow under the Hamiltonian is worked out in 
-Ref.~\cite{Cho:2019brd}. This paper ignores the 1PN Hamiltonian terms.
+Ref.~\cite{Cho:2019brd}. This paper ignores the 1PN Hamiltonian terms
+for succinctness.
 The solution is contained in Eqs.~(3.13, 3.24, 3.32, 3.42, 3.43)
 of Ref.~\cite{Cho:2019brd}.
+
+But we have already incorporated the 1PN terms of the Hamiltonian and implemented the flow solutions for $\vec{S}_1$ and $\vec{S}_2$ in a \textsc{Mathematica} package \texttt{BBHpnToolkit} \cite{MMA1}.
+ The calculations behind this package will be presented in 
+detail in an upcoming manuscript \cite{next_paper}.
+
+
+
 \item The solution of flow under $\SeffL$ is worked out in 
 Ref.~\cite{tanay2021action}.
 The solution is contained in Eqs.~(65, 89, 99)
-of Ref.~\cite{Cho:2019brd}. Ref.~\cite{Cho:2019brd} does not give the solution
-of $\vec{S}_1$ but it can be had in the same manner as that for $\vec{L}$ (Eq.~89).
+of Ref.~\cite{tanay2021action}. Ref.~\cite{tanay2021action}
+ does not give the solution
+of $\vec{S}_1$ but it can be had in the 
+same manner as that for $\vec{L}$ (Eq.~89).
 Then we can have $\vec{S}_2 = \vec{J} - \vec{L} -\vec{S}_1$.
 \end{itemize}
 So, in the remainder of these lecture notes, our focus will be on the only
