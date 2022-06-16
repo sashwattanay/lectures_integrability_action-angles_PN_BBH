@@ -87,11 +87,30 @@ the Hamiltonian vector field of position
 $R_x$, momentum $P_z$ and the Hamiltonian $H$
 are all well defined mathematical entities. 
 For brevity we may refer to 
-Hamiltonian flow as only the flow.
+Hamiltonian flow as only the flow. 
+Also note that under the flow of $f$, another quantity 
+$g$ (both $f$ and $g$ being functions of the
+phase space coordinates $V_i$) changes as
+\begin{align}           \label{flow_eqn_2}
+\frac{d g(V_k)}{d \lambda} =  \frac{\pd g}{\pd V_k} \frac{\pd V_k}{\pd \lambda}=           
+\frac{\pd g}{\pd V_k}    \pb{V_k, f}   = \pb{g, f}    , 
+\end{align}
+where $V_k$ refers to all the phase space coordinates of the system
+and use of the chain rule for PBs has been made in the second-last equality; see
+Eq.~\eqref{C0-PBs_defined_2}.
+Eq.~\eqref{flow_eqn_2}   
+specializes to Eq.~\eqref{C0-EOM-PB} for a flow under the Hamiltonian.
+
+
+
+
 
 
 The \textsc{Mathematica} notebook for evaluating the Poisson 
-brackets is available at (...Git) and (... YouTube).
+brackets between two general quantities 
+is available at Ref.~\cite{MMA1} and 
+\href{https://youtu.be/aoiCk5TtmvE}{this} YouTube video 
+shows how to use this package.
 
 
 

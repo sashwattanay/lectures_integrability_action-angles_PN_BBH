@@ -13,13 +13,12 @@ submanifold defined by constant values of the $n$ commuting constants.
 One way to remain on this submanifold is to flow under any of the 
 $n$ commuting constants, for if you flow under any of the commuting 
 constants, the other commuting constants don't change. This is because
-under the flow of $C_j$, $C_i$ changes as (using Eq.~\eqref{H-flow})
+under the flow of $C_j$, $C_i$ changes as (using Eq.~\eqref{C2-flow_eqn_2})
 \begin{align}
-\frac{d C_i}{d \lambda} =  \pb{C_i, C_j}   = 0 .
+\frac{d C_i(V_k)}{d \lambda}   = \pb{C_i, C_j}   = 0   ,
 \end{align}
-
-
-
+ So none of the commuting constants change under the flow
+ of any commuting constants.
 Owing to this observation, we will try to
 form loops for action integration while flowing 
 under the commuting constants in the following sections.
@@ -82,10 +81,24 @@ the rigid rotations of our coordinate axes.
 
 \begin{definition}[label=def:D]
 Using the language of symplectic forms and differential geometric version 
-of the generalized Stokes' theorem, we can see that 
-$ \oint S_z d \phi =  \int d S_z \wedge d\phi$, the integral on the LHS is a
+of the generalized Stokes' theorem
+(Appendix E of Ref.~\cite{carroll2004spacetime}), we can see that 
+$ \oint S_z d \phi =  \int d S_z \wedge d\phi$. 
+$\int d S_z \wedge d\phi$ can be further processed as: 
+$   \int d S_z \wedge d\phi = S \int d (\cos \theta) \wedge d\phi 
+= - S \int \sin \theta ~ d \theta \wedge d\phi = - \text{Area}/S  $,
+where Area is the area of the sphere
+ enclosed by the loop over which the above
+line integral $\oint S_z d \phi $ is being taken.
+This is so because
+$S^2 \sin \theta ~ d \theta \wedge d\phi$ is the differential area element
+on the 2-sphere (see Sec.~2.10 of Ref.~\cite{carroll2004spacetime}
+for a discussion on viewing forms as areas and volumes).
+So, we finally have 
+$ \oint S_z d \phi =  - \text{Area}/S$.
+The integral on the LHS is a
 line integral, whereas that on the RHS is an area integral on the spin
-sphere. Area integrals are indeed SO(3) covariant.
+sphere. And area integrals are indeed SO(3) rotation invariants.
 \end{definition}
 
 \hfill \break
